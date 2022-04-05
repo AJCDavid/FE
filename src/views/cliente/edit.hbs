@@ -6,26 +6,38 @@
         <div class="card-body">
             <form action="/cliente/edit/{{cliente.idCliente}}" method="POST">
                 <div class="form-group">
-                    <input type="text" name="nombre" maxlength="48" class="form-control" placeholder="nombre" value="{{cliente.nombreCliente}}" autofocus>
+                    <input type="text" name="nombreCliente" maxlength="48" class="form-control" placeholder="nombre" value="{{cliente.nombreCliente}}" autofocus>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="apellido" maxlength="48" class="form-control" placeholder="apellido" value="{{cliente.apellidoCliente}}">
+                    <input type="text" name="identificacionCliente" maxlength="48" class="form-control" placeholder="identificación" value="{{cliente.identificacionCliente}}">
+                </div>
+                 <div class="form-group">
+                                <label>Tipo de Cliente: </label>&nbsp;&nbsp;
+                                    <select name="tipoCliente">
+                                    <option value="{{status}}" hidden="hidden" selected="selected">{{cliente.tipoCliente}}</option>
+                                    <option value="Cliente">Cliente</option>
+                                    <option value="Sujeto retenido">Sujeto retenido</option>
+                                    <option value="Destinatario">Destinatario</option>
+                                </select>
+                          </div>
+                <div class="form-group">
+                    <input type="text" name="direccionCliente" maxlength="48" class="form-control" placeholder="dirección" value="{{cliente.direccionCliente}}">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="telefono" maxlength="48" class="form-control" placeholder="telefono" value="{{cliente.telefonoCliente}}">
+                    <input type="text" name="telefonoConvencionalCliente" maxlength="48" class="form-control" placeholder="telefono" value="{{cliente.telefonoConvencionalCliente}}">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="cedula" maxlength="48" class="form-control" placeholder="cedula" value="{{cliente.cedulaCliente}}">
+                    <input type="text" name="extensionCliente" maxlength="48" class="form-control" placeholder="Extensión" value="{{cliente.extensionCliente}}">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="email" maxlength="48" class="form-control" placeholder="email" value="{{cliente.emailCliente}}">
+                    <input type="text" name="telefonoCelularCliente" maxlength="48" class="form-control" placeholder="Celular" value="{{cliente.telefonoCelularCliente}}">
                 </div>
                 <div class="form-group">
-                    <input type="text" name="direccion" maxlength="48" class="form-control" placeholder="dirección" value="{{cliente.direccionCliente}}">
+                    <input type="text" name="emailCliente" maxlength="48" class="form-control" placeholder="Email" value="{{cliente.emailCliente}}">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-success btn-block">
-                        Save
+                        Actualizar Información
                     </button>
 							  
 						   

@@ -11,21 +11,33 @@
                         <div class="form-group">
                             <input type="text" name="identificacionCliente" maxlength="48" class="form-control" placeholder="identificacionCliente">
                         </div>
+                                <div class="form-group">
+                                <label>Tipo de Cliente: </label>&nbsp;&nbsp;
+                                    <select name="tipoCliente">
+                                    <option value="{{status}}" hidden="hidden" selected="selected">{{status}}</option>
+                                    <option value="Cliente">Cliente</option>
+                                    <option value="Sujeto retenido">Sujeto retenido</option>
+                                    <option value="Destinatario">Destinatario</option>
+                                </select>
+                          </div>
                         <div class="form-group">
-                            <input type="text" name="tipoCliente" maxlength="48" class="form-control" placeholder="Cliente, Sujeto retenido, Destinatario">
+                            <input type="text" name="direccionCliente" maxlength="48" class="form-control" placeholder="direccion">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="direccion" maxlength="48" class="form-control" placeholder="direccion">
+                            <input type="text" name="telefonoConvencionalCliente" maxlength="64" class="form-control" placeholder="telefono">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="telefono" maxlength="64" class="form-control" placeholder="telefono">
+                            <input type="text" name="extensionCliente" maxlength="64" class="form-control" placeholder="extensión">
                         </div>
                         <div class="form-group">
-                            <input type="text" name="email" maxlength="64" class="form-control" placeholder="email">
+                            <input type="text" name="telefonoCelularCliente" maxlength="64" class="form-control" placeholder="celular">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="emailCliente" maxlength="64" class="form-control" placeholder="email">
                         </div>
                         <div class="form-group">
                             <button class="btn btn-success btn-block">
-                                Save
+                                Guardar
                             </button>
                         </div>
                     </form>

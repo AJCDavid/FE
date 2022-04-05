@@ -9,14 +9,16 @@ router.get('/add', isLoggedIn, (req, res) => {
 });
 
 router.post('/add', isLoggedIn, async (req, res)=>{
-    const {nombreCliente, identificacionCliente, tipoCliente, direccion, telefono, email} = req.body;
+    const {nombreCliente, identificacionCliente, tipoCliente, direccionCliente, telefonoConvencionalCliente	,extensionCliente,telefonoCelularCliente, emailCliente} = req.body;
     const newCliente = {
         nombreCliente,
         identificacionCliente,
         tipoCliente,
-        direccion,
-        telefono,
-        email,
+        direccionCliente,
+        telefonoConvencionalCliente	,
+        extensionCliente,
+        telefonoCelularCliente,
+        emailCliente,
         user_id: req.user.id
     };
     await pool.query('INSERT INTO cliente set ?', [newCliente]);
@@ -45,14 +47,16 @@ router.get('/edit/:idCliente', isLoggedIn, async (req, res) => {
 
 router.post('/edit/:idCliente', isLoggedIn, async (req, res) => {
     const { idCliente } = req.params;
-    const {nombreCliente, apellidoCliente, telefonoCliente, cedulaCliente, emailCliente, direccionCliente} = req.body; 
+    const {nombreCliente, identificacionCliente, tipoCliente, direccionCliente, telefonoConvencionalCliente	,extensionCliente,telefonoCelularCliente, emailCliente} = req.body;
     const newCliente = {
         nombreCliente,
-        apellidoCliente,
-        telefonoCliente,
-        cedulaCliente,
+        identificacionCliente,
+        tipoCliente,
+        direccionCliente,
+        telefonoConvencionalCliente	,
+        extensionCliente,
+        telefonoCelularCliente,
         emailCliente,
-        direccionCliente
     };
     await pool.query('UPDATE cliente set ? WHERE idCliente = ?', [newCliente, idCliente]);
     req.flash('success', 'cliente Updated Successfully');
